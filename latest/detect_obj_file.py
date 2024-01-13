@@ -9,13 +9,7 @@ CONFIDENCE=0.4
 ##
 
 
-try:
-  model_obj=joblib.load("yolov5s.joblib")
-except:
-  model_obj=torch.hub.load("ultralytics/yolov5","yolov5s",pretrained=True)
-#model_obj=torch.hub.load("ultralytics/yolov5","yolov5s",pretrained=True)
-#joblib.dump(model_obj,"yolov5s.joblib")
-
+model_obj=torch.hub.load("ultralytics/yolov5","yolov5s",pretrained=True)
 def detect_obj(video_path):
     try:
         cap = cv2.VideoCapture(video_path)

@@ -13,7 +13,7 @@ CONFIDENCE=0.5
 ##---------------
 
 model_back = VGG16_Places365(weights='places')
-#model_back=joblib.load("background_model.joblib")
+# model_back=joblib.load("background_model.joblib")
 
 file_name = 'categories_places365.txt'
 classes = []
