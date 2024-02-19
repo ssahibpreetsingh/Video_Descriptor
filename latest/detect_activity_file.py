@@ -64,10 +64,10 @@ def val_frames_extraction(video_path,SEQUENCE_LENGTH=9,TIME_SECODNS=3):
     # Find video length
     vid_len=frame_count/FPS
     # Finding frames in 3 seconds window
-    thresh_frames=int(3*FPS)
+    thresh_frames=int(TIME_SECODNS*FPS)
 
     # Get the total number of frames in the video.
-    # video_frames_count = int(video_reader.get(cv2.CAP_PROP_FRAME_COUNT))
+    video_frames_count = int(video_reader.get(cv2.CAP_PROP_FRAME_COUNT))
 
     # Calculate the the interval after which frames will be added to the list.
     # as we need 9 frames for each 3 second video

@@ -14,16 +14,8 @@ def index():
 @app.route('/upload', methods=['POST'])
 def upload():
 
-    # if os.listdir('uploads/'):
-    #     l=[]
-    # # print(os.listdir('uploads/'))
-    #     for i in os.listdir('uploads/'):
-    #         l.append(int(i.strip(".MP4")))
-    # max_item=max(l) if l else 0
-
-
     if 'file' not in request.files:
-        return 'No file part'
+        return 'No file found'
     
     file = request.files['file']
 
