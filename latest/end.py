@@ -16,7 +16,7 @@ def final_summary(video_path):
         obj=i[0].split()[0].lower()
         count=j.count(obj)
         count=3 if count>3 else count
-        words=[i[0],k,f"{count} seconds"]
+        words=[i[0],k]#,f"{count} seconds"]
         sent=text_model(words,do_sample=False,num_beams=4)
         if sent == out[0]:
             c_1+=count
