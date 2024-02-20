@@ -20,7 +20,7 @@ def final_summary(video_path):
         sent=text_model(words,do_sample=False,num_beams=5)
         if sent == out[0]:
             c_1+=count
-            out1[-1]=sent.replace(f"for (c_1-count) seconds.","")+f"for {c_1} seconds."
+            out1[-1]=sent.replace(f"for {c_1-count} seconds.","")+f"for {c_1} seconds."
         else:
             c_1=count
             out[0]=sent
