@@ -1,0 +1,11 @@
+torch
+Flask
+torchvision
+numpy
+joblib
+opencv-python
+keytotext
+pillow
+keras
+tensorflow
+keras_applications
